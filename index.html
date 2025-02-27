@@ -1,0 +1,101 @@
+<style>
+  
+  * { box-sizing: border-box; }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+	
+  .frame {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    background-color: gray;
+    z-index: -10
+  }
+  
+  .cup  {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 5% 5% 20% 20%;
+    background: linear-gradient(180deg, white 45%, rgba(5,0,91,1) 45%);
+    background-size: 100% 30%;
+  }
+  
+  #topCup {
+    top: 10px;
+    right: 30px;
+  }
+  
+  #bottomBottomCup {
+    bottom: 10px;
+    left: 100px;
+    z-index: 2;
+  }
+  
+  #topBottomCup {
+    bottom: 105px;
+    left: 100px;
+    z-index: 1;
+  }
+  
+  .bottomCup::before {
+    background: rgb(200, 0, 0);
+    border-radius: 5% 5% 20% 20%;
+    display: inline-block;
+    content: "";
+    width: 60%;
+    height: 100%;
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+  }
+  
+  .bottomCup::after {
+    content: "";
+    background: yellow;
+    position: absolute;
+    display: inline-block;
+    left: 8%;
+    top: 36%;
+    width: 25%;
+    height: 25%;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+
+  .handle {
+    position: absolute;
+    z-index: -1;
+    border: 12px solid white;
+    border-radius: 50%
+  }
+  
+  .handleTop {
+    width: 50%;
+    height: 75%;
+    right: -30%;
+    top: 10%;
+  }
+
+</style>
+
+
+<div class="frame">
+	<!-- ur HTML code goes here --> 
+  <div class="cup" id="topCup">
+    <div class="handle handleTop"></div>
+  </div>
+  
+  <div class="cup bottomCup" id="bottomBottomCup">
+    <div class="handle handleTop"></div>
+  </div>
+  
+  <div class="cup bottomCup" id="topBottomCup">
+    <div class="handle handleTop"></div>
+  </div>
+  
+</div>
