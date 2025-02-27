@@ -20,12 +20,13 @@
   }
   
   .cup  {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     position: absolute;
     border-radius: 5% 5% 20% 20%;
     background: linear-gradient(180deg, white 45%, rgba(5,0,91,1) 45%);
     background-size: 100% 30%;
+    border-bottom: 3px solid rgb(72, 69, 85);
   }
   
   #topCup {
@@ -40,13 +41,13 @@
   }
   
   #topBottomCup {
-    bottom: 105px;
+    bottom: 125px;
     left: 100px;
     z-index: 1;
   }
   
   .bottomCup::before {
-    background: rgb(200, 0, 0);
+    background: rgb(220, 0, 0);
     border-radius: 5% 5% 20% 20%;
     display: inline-block;
     content: "";
@@ -69,16 +70,32 @@
 
   .handle {
     position: absolute;
-    z-index: -1;
+    z-index: -2;
+    width: 50%;
+    height: 75%;
     border: 12px solid white;
     border-radius: 50%
   }
   
   .handleTop {
-    width: 50%;
-    height: 75%;
     right: -30%;
     top: 10%;
+  }
+  
+  .handleBottom {
+    left: -30%;
+    top: 10%;
+  }
+  
+  .canister {
+    width: 200px;
+    height: 330px;
+    background-color: rgb(255,230,120);
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 3%;
+    background-image: linear-gradient(180deg, rgba(255,220,120,1) 66%, rgba(255,76,33,1) 66%, rgba(255,76,33,1) 97%, rgba(164,164,164,1) 97%);  
   }
 
 </style>
@@ -91,11 +108,13 @@
   </div>
   
   <div class="cup bottomCup" id="bottomBottomCup">
-    <div class="handle handleTop"></div>
+    <div class="handle handleBottom"></div>
   </div>
   
   <div class="cup bottomCup" id="topBottomCup">
-    <div class="handle handleTop"></div>
+    <div class="handle handleBottom"></div>
   </div>
   
+  <div class="canister">Helllo</div>
+    
 </div>
