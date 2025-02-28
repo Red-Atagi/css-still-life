@@ -386,7 +386,31 @@
       scaleX(.9)
       scaleY(var(--letter-scale-y));
   }
+  
+  .bottomText {
+    font-size: 18px;
+/*     font-family: sans-serif; */
+    color: hsla(253, 100%, 12%, 0.85);
+    position: absolute;
+    font-style: italic;
+    top: 57%;    
+  }
+  
+  .espressoR {
+    left: 18%;
+    transform: scaleX(.9)    
+  }
+  
+  .groundR {
+    left: 49%;
+    transform: scaleX(1)    
+  }
 
+  .coffeeR {
+    left: 76%;
+    transform: scaleX(.78)   
+  }  
+  
 </style>
 
 
@@ -433,6 +457,10 @@
     <div class="bustelo ber">E</div>
     <div class="bustelo lr">L</div>
     <div class="bustelo or">O</div>
+    
+    <div class="bottomText espressoR">Espresso</div>
+    <div class="bottomText groundR">Ground</div>
+    <div class="bottomText coffeeR">Coffe</div>
   </div>
   
 <!--   Pot HTML Code -->
