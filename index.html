@@ -15,7 +15,7 @@
     width: 500px;
     height: 500px;
     border: 1px solid black;
-    background-color: gray;
+    background-color: rgb(180, 180, 180);
     z-index: -10
   }
   
@@ -106,6 +106,104 @@
     bottom: 10px;
     left: 230px;
   }
+  
+  .pot {
+    position: absolute;
+    width: 311px;
+    height: 164px;
+    right: -3%;
+    top: 16%;
+/*     border: 1px solid black; */
+/*     background-color: blue; */
+    z-index: -3;
+  }
+  
+  #main-body1 {
+    width: 51%;
+    height: 58%;
+    background-color: #ea5807;
+    position: absolute;
+    left: 15%;
+    top: 17%;
+    border-radius: 0% 0% 0% 4%;
+    transform: skew(-5deg);
+  }
+  
+  #main-body2 {
+    width: 13%;
+    height: 58%;
+    left: 64%;
+    top: 17%;
+    position: absolute;
+    background-color: red;
+    clip-path: polygon(20% 0, 100% 4%, 61% 100%, 0% 100%); 
+  }
+  
+  #spout {
+    width: 26%;
+    height: 58%;
+    left: -9%;
+    top: 17%;
+    position: absolute;
+    background-color: #d34e01;
+    clip-path: polygon(32% 13%, 50% 0, 100% 0, 91% 100%); 
+  }
+  
+  #lid {
+    width: 74%;
+    height: 29%;
+    left: 4%;
+    top: 5%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    background-color: yellow;    
+  }
+  
+  #handle-attach {
+    width: 10%;
+    height: 29%;
+    background-color: orange;
+    position: absolute;
+    border-radius: 5%;
+    left: 69%;
+    top: 12%;
+    z-index: -1;
+  }
+  
+  #handle1 {
+    width: 20%;
+    height: 26%;
+    background-color: black;
+    position: absolute;
+    left: 79%;
+    top: 13%;
+    z-index: -2;
+    border-radius: 0% 30% 30% 0%;
+  }
+  
+  #handle2 {
+    width: 11%;
+    height: 86%;
+    background-color: black;
+    position: absolute;
+    left: 89%;
+    top: 13%;
+    z-index: -2;
+    border-radius: 30% 30% 30% 50%;
+  }
+  
+  #top-handle {
+    width: 14%;
+    height: 20%;
+    background-color: black;
+    position: absolute;
+    border-radius: 16%;
+    left: 33%;
+    top: -18%;
+    z-index: -2;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+  }
 
 </style>
 
@@ -127,5 +225,15 @@
   <div class="canister" id="leftCanister"></div>
   <div class="canister" id="rightCanister"></div>
   
+    <div class="pot">
+    <div id="spout"></div>
+    <div id="main-body1"></div>
+    <div id="main-body2"></div>
+    <div id="lid"></div>
+    <div id="handle-attach"></div>
+    <div id="handle1"></div>    
+    <div id="handle2"></div>
+    <div id="top-handle"></div>
+  </div>
     
 </div>
