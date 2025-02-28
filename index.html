@@ -1,7 +1,9 @@
 <style>
   
   * { box-sizing: border-box; }
-  
+  :root {
+    --cup-white: hsl(57, 18%, 100%);
+  }
   body {
     display: flex;
     justify-content: center;
@@ -24,8 +26,9 @@
     height: 120px;
     position: absolute;
     border-radius: 5% 5% 20% 20%;
-    background: linear-gradient(180deg, white 45%, rgba(5,0,91,1) 45%);
+    background: linear-gradient(90deg, rgba(76,76,182,0.2) 0%, rgba(255,255,255,0.07997195460215334) 36%, rgba(255,255,255,0) 75%, rgba(60,60,176,0.2) 100%), linear-gradient(180deg, var(--cup-white) 45%, rgba(5,0,91,1) 45%);
     background-size: 100% 30%;
+    box-shadow: 24px 18px 41px -14px rgba(66, 68, 90, 0.54);
     border-bottom: 3px solid rgb(72, 69, 85);
   }
   
@@ -51,6 +54,7 @@
     background: rgb(220, 0, 0);
     border-radius: 5% 5% 20% 20%;
     display: inline-block;
+    background-image: linear-gradient(90deg, rgba(76,76,182,0.2) 0%, rgba(255,255,255,0.08) 62%, rgba(255,255,255,0.08) 100%);;
     content: "";
     width: 60%;
     height: 100%;
@@ -61,7 +65,6 @@
     content: "";
     background: yellow;
     position: absolute;
-    display: inline-block;
     left: 8%;
     top: 36%;
     width: 25%;
@@ -74,8 +77,10 @@
     z-index: -2;
     width: 50%;
     height: 75%;
-    border: 12px solid white;
-    border-radius: 50%
+    border: 12px solid var(--cup-white);
+    border-radius: 50%;
+    background-image: radial-gradient(circle, rgba(255,255,255,0) 30%, rgba(66,68,90,0.15) 100%);
+/*     box-shadow: 21px 18px 41px -0px rgba(66, 68, 90, 0.54); */
   }
   
   .handleTop {
@@ -90,20 +95,32 @@
   
   .canister {
     width: 210px;
-    height: 300px;
+    height: 290px;
     background-color: rgb(255,230,120);
     position: absolute;
-    border-radius: 3%;
-    background-image: linear-gradient(180deg, rgba(255,220,120,1) 66%, rgba(255,76,33,1) 66%, rgba(255,76,33,1) 97%, rgba(164,164,164,1) 97%);  
+    border-radius: 5% 5% 0% 0%;
+    background-image: 
+      linear-gradient(90deg, rgba(76,76,182,0.2) 0%, rgba(255,255,255,0.08) 36%, rgba(255,255,255,0) 75%, rgba(60,60,176,0.2) 100%),
+      linear-gradient(180deg, hsl(52, 100%, 54%) 66%, hsl(7, 87%, 56%) 66%);  
+  }
+  
+  .canister::before {
+    content: "";
+    width: 210px;
+    height: 10px;
+    bottom: -7px;
+    position: absolute;
+    background-color: rgba(164,164,164,1) ;
+    background-image: linear-gradient(90deg, rgba(164,164,190,1) 16%, rgba(255,255,255,1) 36%, rgba(164,164,190,1) 52%, rgba(164,164,190,1) 58%, rgba(207,208,227,1) 75%, rgba(146,146,168,1) 93%); 
   }
   
   #leftCanister {
-    bottom: 10px;
+    top: 190px;
     left: 10px; 
   }
   
   #rightCanister {
-    bottom: 10px;
+    top: 190px;
     left: 230px;
   }
   
@@ -146,7 +163,7 @@
     top: 17%;
     position: absolute;
     background-color: hsl(19, 84%, 48%);
-    clip-path: polygon(32% 13%, 50% 0, 100% 0, 91% 100%); 
+    clip-path: polygon(32% 7%, 50% 0, 100% 0, 91% 100%); 
   }
   
   #lid {
