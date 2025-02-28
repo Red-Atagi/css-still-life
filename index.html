@@ -4,7 +4,7 @@
   :root {
     --cup-white: hsl(57, 60%, 91%);
     --handle-white: hsl(57, 35%, 75%);
-    --letter-scale-y: 1.2;
+    --letter-scale-y: 1;
   }
   
   @font-face {
@@ -259,12 +259,76 @@
     clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
   }
   
+  .bustelo {
+    font-family: MoriaCitadel;
+    font-size: 50px;
+    color: hsla(253, 100%, 12%, 0.85);
+    position: absolute;
+    top: 33%;
+  }
+  
+  .bl {
+    left: 20%;
+    transform: 
+      scaleX(.85) 
+      scaleY(var(--letter-scale-y));    
+  }
+  
+  .br {
+    left: 0%;
+    transform: 
+      scaleX(.5) 
+      scaleY(var(--letter-scale-y));      
+  }
+  
+  .ur {
+    left: 15%;
+    transform:
+      scaleX(0.6)
+      scaleY(var(--letter-scale-y));
+  }
+  
+  .sr {
+    left: 33%;
+    transform: 
+      scaleX(.8) 
+      scaleY(var(--letter-scale-y));    
+  }
+  
+  .tr {
+    left: 48%;
+    transform: 
+      scaleX(.83) 
+      scaleY(var(--letter-scale-y));    
+  }
+  
+  .ber {
+    left: 69%;
+    transform: 
+      scaleX(.7) 
+      scaleY(var(--letter-scale-y));    
+  }
+
+  .lr {
+    left: 85%;
+    transform: 
+      scaleX(.75) 
+      scaleY(var(--letter-scale-y));    
+  }
+  
+  .or {
+    left: 88%;
+    transform: 
+      scaleX(.3) 
+      scaleY(var(--letter-scale-y));    
+  }
+  
   .cafe {
     font-family: MoriaCitadel;
     font-size: 50px;
     color: hsla(253, 100%, 12%, 0.85);
     position: absolute;
-    top: 10%;
+    top: 13%;
   }
   
   .cl {
@@ -294,6 +358,34 @@
       scaleX(.7)
       scaleY(var(--letter-scale-y));
   }
+  
+  .cr {
+    left: 0%;
+    transform: 
+      scaleX(.6) 
+      scaleY(var(--letter-scale-y));    
+  }
+
+  .ar {
+    left: 17%;
+    transform:
+      scaleX(0.75)
+      scaleY(var(--letter-scale-y));
+  }
+  
+  .fr {
+    left: 39%;
+    transform: 
+      scaleX(.9)
+      scaleY(var(--letter-scale-y));
+  }
+  
+  .er {
+    left: 60%;
+    transform: 
+      scaleX(.9)
+      scaleY(var(--letter-scale-y));
+  }
 
 </style>
 
@@ -315,12 +407,33 @@
 <!--   Left Canister HTML Code -->
   <div class="cansiterCapL"></div>
   <div class="canister" id="leftCanister">
-      <div class="cafe cl">C</div><div class="cafe al">A</div><div class="cafe fl">F</div><div class="cafe el">E</div>
+    <!--     Cafe Letters -->
+    <div class="cafe cl">C</div>
+    <div class="cafe al">A</div>
+    <div class="cafe fl">F</div>
+    <div class="cafe el">E</div>
+      <!--     Bustelo Letters -->
+    <div class="bustelo bl">B</div>
+    <div class="bustelo al">U</div>
   </div>
   
 <!--   Right Conister HTML Code -->
-  <div class="cansiterCapR"></div>  
-  <div class="canister" id="rightCanister"></div>
+  <div class="cansiterCapR">  </div>  
+  <div class="canister" id="rightCanister">
+      <!--     Cafe Letters -->
+    <div class="cafe cr">C</div>
+    <div class="cafe ar">A</div>
+    <div class="cafe fr">F</div>
+    <div class="cafe er">E'</div>
+      <!--     Bustelo Letters -->
+    <div class="bustelo br">B</div>
+    <div class="bustelo ur">U</div>
+    <div class="bustelo sr">S</div>
+    <div class="bustelo tr">T</div>
+    <div class="bustelo ber">E</div>
+    <div class="bustelo lr">L</div>
+    <div class="bustelo or">O</div>
+  </div>
   
 <!--   Pot HTML Code -->
   <div class="pot">
